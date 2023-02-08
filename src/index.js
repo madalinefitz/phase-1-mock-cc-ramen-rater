@@ -32,45 +32,17 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const form = document.getElementById("new-ramen")
     form.addEventListener('submit', e => {
         e.preventDefault()
-        console.log(e)
+        
+        const newRamen = {
+            name: e.target.name.value,
+            restaurant: e.target.restaurant.value,
+            image: e.target.image.value,
+            rating: e.target.rating.value,
+            comment: e.target["new-comment"].value,
+        }
+        displayImg(newRamen)
+        
         })
     })
 
     
-
-
-// function newRamen(e){  
-
-//         e.target["submit-form"].parentNode.value
-//         const p = document.createElement ('p')
-//         const newName = document.getElementById("new-name")
-//         p.textContent = newName.value
-
-// }
-
-
-
-
-
-
-
-    
-    // p.textContent = e.target['new-name'].parentNode.value
-    // console.log(p)
-//     
-        // e.target["new-name"].parentNode.value
-        // console.log(newRamenThings)
-        
-        
-        // newName.input = newRamenThings.name
-        // console.log(newRamenThings)
-    
-    //   
-    // "name": "Shoyu Ramen",
-    // "restaurant": "Nonono",
-    // "image": "./assets/ramen/shoyu.jpg",
-    // "rating": 7,
-    // "comment": "Delish. Can't go wrong with a classic!"
-
-
-
